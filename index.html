@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Portfolio</title>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about_me">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#project">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Me -->
+    <section id="about_me" class="bg-light p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>About Me</h1>
+                    <p>My name is Minh Le, and I am from Vietnam. I moved to the U.S. 5 years ago to begin a new life
+                        with my parents. I
+                        started my college life in 2012 in Vietnam. I studied information technology, but I didn't
+                        complete it
+                        since I moved to the U.S. in 2016.
+                    </p>
+                    <p>I had some experience in the computer field, so I chose
+                        computer
+                        science to study when I applied to Bunker Hill Community College.
+                        I completed my associate degree in
+                        computer science with the highest honor in 2019. Then, I transferred to the University of
+                        Massachusetts
+                        Lowell to complete my bachelor's degree in computer science with summa cum laude in 2021.
+                    </p>
+                    <p>
+                        Now, I am looking for an entry-level position in a software development company to utilize my
+                        relevant
+                        experience and problem-solving skills.
+                        The best skill that I have is willing to study new things. I always put a lot of effort into
+                        learning them, so I
+                        usually get good grades in school.
+                    </p>
+
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid img-thumbnail" src="images/avatar.png" alt="avatar" />
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="bg-light">
+        <div class="container">
+            <h1>Resume</h1>
+            <div class="ratio ratio-16x9">
+                <iframe src="files/resume.pdf" title="resume">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project -->
+    <section id="project" class="bg-light p-5">
+        <div class="container">
+            <h1>Projects</h1>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h3>C++</h3>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.loom.com/embed/0db2d60ad3b04a7cac7414a4f4a02226" title="first_game"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="p-3">
+                        I created this game in my free time when I studied ESL. At this time,
+                        I could not study computer science class because of my poor English.
+                        This game is kind of similar to shooting balloon that I played when I was a child.
+                    </p>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <h3>JavaFx</h3>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.loom.com/embed/1864dde9b2694649a810b2d2a946b9d7" title="pong"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="p-3">
+                        I created a pong-game by reference from my textbook.
+                        Players can control the paddle to earn score after the ball hit the paddle.
+                        If the player earns 2 points, the ball will change the color and increasing speed.
+                        If the player misses the ball, the paddle will increase its size.
+                    </p>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <h3>JavaFx</h3>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.loom.com/embed/d25c24a217d84c268fbc4d5a60b486db" title="shooting"
+                            allowfullscreen></iframe>
+                    </div>
+                    <p class="p-3">
+                        I created a shooting game. Users can control a rectangle and try to kill other enemies.
+                        After kill all of enemies, the number of enemies will increase by one for the next round.
+                        The users lose after 3 times be killed.
+                        The users can change the color, speed or save the game.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <h3>Pythagoras Tree (C++)</h3>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="images/pythagoras_tree_1.png" alt="pythagoras tree 1">
+                </div>    
+                <div class="col-md-6">
+                    <img class="img-fluid" src="images/pythagoras_tree_2.png" alt="pythagoras tree 2">
+                </div>
+                <p class="p-3 lead">
+                    I used SFML and recursion to draw a Pythagoras Tree. 
+                    The users can enter the left angle and the right angle of the middle triangle to draw the tree as the second picture.
+                    The left angle and the right angle are equal to 45 degree as the first picture.
+                </p>
+            </div>
+            <div class="row">
+                <h3>Scrabble Game (jQuery UI)</h3>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://minhtri172.github.io/hw5_v2/" title="scrabble"></iframe>
+                </div>
+                <p class="p-3 lead">
+                    I created a game using jQuery UI framework where the users can place valid English words on the board to earn scores.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center">
+        <p>&copy;Copyright 2022 by Minh Le.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
