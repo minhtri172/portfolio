@@ -7,6 +7,7 @@
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                         <a class="nav-link" href="#about_me">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#resume">Resume</a>
+                        <a class="nav-link" href="#skill">Skills</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#project">Projects</a>
@@ -38,132 +39,157 @@
     </nav>
 
     <!-- About Me -->
-    <section id="about_me" class="bg-light p-5">
+    <section id="about_me" class="p-5">
         <div class="container">
             <div class="row">
+                <div class="col-md-2">
+                    <img class="img-fluid rounded-circle" src="images/my_pic.jpg" alt="avatar" />
+                </div>
                 <div class="col-md-8">
                     <h1>About Me</h1>
-                    <p>My name is Minh Le, and I am from Vietnam. I started my college life in 2012 in Vietnam. I studied
-                        information technology, but I didn't
-                        complete it
-                        since I moved to the U.S. in 2016.
+                    <p>
+                        I'm Minh Le. I have recently graduated with a degree in Computer Science.
+                        I chose that field of study because I have always been interested in math and computer.
                     </p>
-                    <p>I had some experience in the computer field, so I chose
-                        computer
-                        science to study when I applied to Bunker Hill Community College.
-                        I completed my associate degree in
-                        computer science with the highest honor in 2019. Then, I transferred to the University of
-                        Massachusetts
-                        Lowell to complete my bachelor's degree in computer science with summa cum laude in 2021.
+                    <p>
+                        Especially, I am interested in web development. I usually surf the internet everyday and wonder
+                        how the websites are created. Where does the data come from? How programmer make animation on a
+                        website? How programmer handle clicks from users?
                     </p>
                     <p>
                         Now, I am looking for an entry-level position in a software development company to utilize my
                         relevant
                         experience and problem-solving skills.
-                        The best skill that I have is willing to study new things. I always put a lot of effort into
-                        learning them, so I
-                        usually get good grades in school.
                     </p>
-
                 </div>
-                <div class="col-md-4">
-                    <img class="img-fluid img-thumbnail" src="images/avatar.png" alt="avatar" />
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Resume -->
-    <section id="resume" class="bg-light">
+    <!--Skills-->
+    <section id="skill" class="bg-light text-center">
         <div class="container">
-            <h1>Resume</h1>
-            <div class="ratio ratio-16x9">
-                <iframe src="files/resume.pdf" title="resume">
-                </iframe>
+            <div class="row p-3">
+                <h1>Skills</h1>
+                <h4 class="mt-3">Technical Skills</h4>
+                <div class="row p-3">
+                    <div class="col">
+                        <img class="icons" src="images/css.png" alt="css-icon">
+                        <p class="p-3">CSS</p>
+                    </div>
+                    <div class="col">
+                        <img class="icons" src="images/html-5.png" alt="html-icon">
+                        <p class="p-3">HTML</p>
+                    </div>
+                    <div class="col">
+                        <img class="icons" src="images/javascript.png" alt="javascript-icon">
+                        <p class="p-3">JavaScript</p>
+                    </div>
+                    <div class="col">
+                        <img class="icons" src="images/java-icon.png" alt="java-icon">
+                        <p class="p-3">Java</p>
+                    </div>
+                    <div class="col">
+                        <img class="icons" src="images/c-.png" alt="c-icon">
+                        <p class="p-3">C/C++</p>
+                    </div>
+                    <div class="col">
+                        <img class="icons" src="images/hashtag.png" alt="hashtag-icon">
+                        <p class="p-3">C#</p>
+                    </div>
+                    <div class="col">
+                        <img class="icons" src="images/python.png" alt="python-icon">
+                        <p class="p-3">Python</p>
+                    </div>
+                </div>
+                <h4>Soft Skills</h4>
+                <div class="row p-3">
+                    <div class="col">
+                        <img class="icons" src="images/java-icon.png" alt="java-icon">
+                        <p class="p-3">Time Management</p>
+                    </div>
+                    <div class="col">
+                        <img class="icons" src="images/java-icon.png" alt="java-icon">
+                        <p class="p-3">Problem-Solving</p>
+                    </div>
+                    <div class="col">
+                        <img class="icons" src="images/java-icon.png" alt="java-icon">
+                        <p>Critical Thinking</p>
+                    </div>
+                    <div class="col">
+                        <img class="icons" src="images/java-icon.png" alt="java-icon">
+                        <p class="p-3">Teamwork</p>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
     <!-- Project -->
-    <section id="project" class="bg-light p-5">
+    <section id="project" class="p-3 text-center">
         <div class="container">
             <h1>Projects</h1>
             <div class="row">
-                <div class="col-md-4 text-center">
-                    <h3>C++</h3>
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.loom.com/embed/0db2d60ad3b04a7cac7414a4f4a02226" title="first_game"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
+                <div class="col-md-4">
+                    <h3>JavaFx</h3>
+                    <img src="images/pong.gif" alt="ping pong">
+
                     <p class="p-3">
-                        I created this game in my free time when I studied ESL. At this time,
-                        I could not study computer science class because of my poor English.
-                        This game is kind of similar to shooting balloon that I played when I was a child.
+                        Players control the paddle to earn score after the ball hit the paddle.
+                        If players earn 2 points, the ball will change the color and increase speed.
+                        If players miss the ball, the paddle will increase its size.
                     </p>
                 </div>
 
-                <div class="col-md-4 text-center">
+                <div class="col-md-4">
                     <h3>JavaFx</h3>
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.loom.com/embed/1864dde9b2694649a810b2d2a946b9d7" title="pong"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
+                    <img src="images/shoot.gif" alt="shooting">
                     <p class="p-3">
-                        I created a pong-game by reference from my textbook.
-                        Players can control the paddle to earn score after the ball hit the paddle.
-                        If the player earns 2 points, the ball will change the color and increasing speed.
-                        If the player misses the ball, the paddle will increase its size.
-                    </p>
-                </div>
-
-                <div class="col-md-4 text-center">
-                    <h3>JavaFx</h3>
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.loom.com/embed/d25c24a217d84c268fbc4d5a60b486db" title="shooting"
-                            allowfullscreen></iframe>
-                    </div>
-                    <p class="p-3">
-                        I created a shooting game. Users can control a rectangle and try to kill other enemies.
+                        Players control a yellow rectangle and kill other enemies (red rectangles).
                         After kill all of enemies, the number of enemies will increase by one for the next round.
                         The users lose after 3 times be killed.
                         The users can change the color, speed or save the game.
                     </p>
                 </div>
+
+                <div class="col-md-4">
+                    <h3>Java</h3>
+                    <img src="images/bookstore.gif" alt="bookstore">
+                    <p class="p-3">
+                        Using Java Servlet to create a bookstore online. There is an admin page to add, modify and
+                        delete books.
+                        Users can place books to the cart, then the website prints the invoice with total cost.
+                    </p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section id="scrabble-detail" class="text-center p-3">
+        <div class="container">
             <div class="row">
-                <h3>Pythagoras Tree (C++)</h3>
-                <div class="col-md-6">
-                    <img class="img-fluid" src="images/pythagoras_tree_1.png" alt="pythagoras tree 1">
-                </div>
-                <div class="col-md-6">
-                    <img class="img-fluid" src="images/pythagoras_tree_2.png" alt="pythagoras tree 2">
-                </div>
-                <p class="p-3 lead">
-                    I used SFML and recursion to draw a Pythagoras Tree.
-                    The users can enter the left angle and the right angle of the middle triangle to draw the tree as
-                    the second picture.
-                    The left angle and the right angle are equal to 45 degree as the first picture.
-                </p>
-            </div>
-            <div class="row">
-                <h3>Scrabble Game (jQuery UI)</h3>
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://minhtri172.github.io/hw5_v2/" title="scrabble"></iframe>
-                </div>
-                <p class="p-3 lead">
-                    I created a game using jQuery UI framework where the users can place valid English words on the
-                    board to earn scores.
+                <h3>jQuery UI - Scrabble Game</h3>
+                <p>
+                    Players drop and drag letter to make valid English words.
+                    If the word is valid, player can earn score and save the word to the board.
+                    Then, players can use the old word to make new valid English words.
                 </p>
             </div>
         </div>
     </section>
 
+    <section id="scrabble-content">
+        <div class="container">
+            <div class="ratio ratio-4x3">
+                <iframe src="https://minhtri172.github.io/hw5_v2/" title="scrabble"></iframe>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-light text-center">
-        <p>&copy;Copyright 2022 by Minh Le.</p>
+    <footer class="text-center">
+        &copy;Copyright 2022 by Minh Le.
     </footer>
 
     <!-- JavaScript -->

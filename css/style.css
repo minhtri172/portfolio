@@ -1,0 +1,40 @@
+img {
+    height: 280px;
+    width: 350px;
+}
+
+.icons {
+    height: 50px;
+    width: 50px;
+}
+
+.ratio-4x3 {
+    --bs-aspect-ratio: 60%;
+}
+
+#about_me {
+    background-color: #e9d5a1;
+    font-size: 18pt;
+}
+
+#project {
+    background-color: #e9d5a1;
+    font-size: 14pt;
+}
+
+#scrabble-detail {
+    background-color: #000000;
+    color: white;
+    font-size: 14pt;
+}
+
+#scrabble-content {
+    background-color: #e9d5a1;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    height: 75px;
+    padding: 28px;
+}
