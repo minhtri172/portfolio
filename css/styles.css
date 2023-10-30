@@ -1,0 +1,247 @@
+/* this contains the whole page */
+.container {
+    color: white;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 17, 121, 0.9023984593837535) 30%, rgba(0, 212, 255, 1) 100%);
+    overflow: hidden;
+    font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+}
+
+/* this is second container inside the one at above */
+.content {
+    padding-top: 100px;
+    width: 65%;
+    margin: 0 auto;
+}
+
+/* left side contains personal information and contact */
+.left-content {
+    width: 20%;
+    float: left;
+    font-size: 20px;
+    position: fixed;
+}
+
+.project-detail a {
+    text-decoration: none;
+    color: white;
+}
+
+/* display avatar */
+.avatar {
+    text-align: center;
+}
+
+.avatar img {
+    vertical-align: middle;
+    width: 180px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* menu for right content */
+.menu {
+    margin-right: 5%;
+    margin-top: 10%;
+    text-align: right;
+}
+
+.menu ul {
+    list-style-type: none;
+    font-size: 24px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu li {
+    margin-bottom: 5px;
+}
+
+.menu a:hover {
+    color: #A6FF96;
+}
+
+/* this is for social media contact links */
+.social-media {
+    float: right;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* This side is for about, experience, projects */
+.right-content {
+    width: 60%;
+    float: right;
+    font-size: 17px;
+}
+
+/* This is for experience part */
+
+.top-detail {
+    overflow: hidden;
+}
+
+.left-top-detail {
+    float: left;
+}
+
+.right-top-detail {
+    float: right;
+}
+
+.bottom-detail li {
+    margin-bottom: 5px;
+}
+
+/* this is for projects part */
+#projects {
+    margin-top: 10px;
+}
+
+.project {
+    overflow: hidden;
+}
+
+/* images of projects */
+.left-image {
+    float: left;
+    width: 20%;
+    margin: 3% 0;
+}
+
+.left-image img {
+    width: 185px;
+    height: 150px;
+}
+
+/* this is for prjects detail */
+.project-detail {
+    float: right;
+    width: 70%;
+}
+
+.project-detail ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-detail li {
+    margin: 1% 0;
+}
+
+.project-detail p {
+    font-weight: bold;
+    margin: 3% 0;
+    font-size: 25px;
+}
+
+/* this is for skills set below the projects */
+p.skill {
+    font-size: 12px;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 10px;
+    width: 50px;
+    height: 10px;
+    float: left;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* responsive web design  */
+@media only screen and (max-width: 1600px) {
+    .left-image img {
+        width: 325px;
+        height: 300px;
+    }
+    .left-image {
+        float: none;
+    }
+    .project-detail {
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .left-top-detail {
+        float: none;
+        display: block;
+    }
+    .right-top-detail {
+        float: none;
+        display: block;
+    }
+    .left-content {
+        width: 100%;
+        float: none;
+        position: relative;
+    }
+    .right-content {
+        width: 100%;
+        float: none;
+    }
+    .menu {
+        display: none;
+    }
+    .social-media {
+        float: none;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .left-image img {
+        width: 400px;
+        height: 328px;
+    }
+    .left-image {
+        float: none;
+        width: 100%;
+        margin: 0 0;
+        text-align: center;
+    }
+    .project-detail {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .left-image img {
+        width: 200px;
+        height: 185px;
+    }
+}
+
