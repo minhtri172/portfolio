@@ -8,6 +8,10 @@
     font-size: 20pt;
 }
 
+h1,h2 {
+    color: #40F8FF;
+}
+
 /* this is second container inside the one at above */
 .content {
     padding-top: 1%;
@@ -24,7 +28,7 @@
 
 .project-detail a {
     text-decoration: none;
-    color: white;
+    color: #97FEED;
 }
 
 /* display avatar */
@@ -116,6 +120,7 @@
 
 .left-top-detail {
     float: left;
+    color: #F8F988;
 }
 
 .right-top-detail {
@@ -151,11 +156,6 @@
 .project-detail {
     float: right;
     width: 70%;
-}
-
-.project-detail ul {
-    list-style-type: none;
-    padding: 0;
 }
 
 .project-detail li {
@@ -221,6 +221,7 @@ p.skill {
     .right-top-detail {
         float: none;
         display: block;
+        font-style: italic;
     }
     .left-content {
         width: 100%;
@@ -267,6 +268,9 @@ p.skill {
         font-size: 10pt;
         width: 69px;
         height: 16px;
+    }
+    .right-top-detail {
+        font-size: 10pt;
     }
 }
 
