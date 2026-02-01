@@ -1,276 +1,84 @@
-/* this contains the whole page */
-.container {
-    color: white;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 17, 121, 0.9023984593837535) 30%, rgba(0, 212, 255, 1) 100%);
-    overflow: hidden;
-    font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
-    font-size: 20pt;
+:root{
+    --bg-1: #071032;
+    --bg-2: #022B3A;
+    --accent: #2BE7FF;
+    --muted: rgba(255,255,255,0.75);
+    --card: rgba(255,255,255,0.04);
 }
 
-h1,h2 {
-    color: #40F8FF;
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(135deg,var(--bg-1),var(--bg-2));
+    color: #eaf6ff;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
 }
 
-/* this is second container inside the one at above */
-.content {
-    padding-top: 1%;
-    width: 85%;
-    margin: 0 auto;
+.container{min-height:100vh;padding:40px 20px}
+
+.content{
+    max-width:1100px;margin:0 auto;display:flex;gap:32px;align-items:flex-start;
 }
 
-/* left side contains personal information and contact */
-.left-content {
-    width: 20%;
-    float: left;
-    position: fixed;
+.left-content{
+    width:260px;flex:0 0 260px;background:linear-gradient(180deg,rgba(255,255,255,0.03),transparent);
+    border-radius:12px;padding:24px;position:sticky;top:40px;height:fit-content;
 }
 
-.project-detail a {
-    text-decoration: none;
-    color: #97FEED;
+.avatar{display:flex;justify-content:center;margin-bottom:16px}
+.avatar img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,0.08);box-shadow:0 8px 20px rgba(2,8,23,0.6)}
+
+.left-content h1{margin:0;font-size:20px;color:var(--accent);font-weight:700}
+.left-content h2{margin:6px 0 12px;color:var(--muted);font-weight:600;font-size:14px}
+.left-content p{font-size:13px;color:var(--muted);line-height:1.45}
+
+.menu{margin-top:18px}
+.menu ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.menu a{color:var(--muted);text-decoration:none;padding:8px;border-radius:8px;display:block}
+.menu a:hover{background:rgba(255,255,255,0.03);color:var(--accent)}
+
+.social-media{display:flex;gap:8px;justify-content:center;margin-top:14px}
+.fa{display:inline-flex;align-items:center;justify-content:center;height:36px;width:36px;border-radius:8px;color:white}
+.fa-facebook{background:#3B5998}
+.fa-google{background:#dd4b39}
+.fa-linkedin{background:#007bb5}
+.fa-twitter{background:#55ACEE}
+
+.right-content{flex:1}
+
+.right-content h1{color:var(--accent);margin-top:0}
+.right-content p{color:var(--muted);line-height:1.6}
+
+.detail{background:var(--card);padding:16px;border-radius:10px;margin-bottom:14px;box-shadow:0 6px 18px rgba(2,8,23,0.45)}
+.top-detail{display:flex;justify-content:space-between;gap:12px}
+.left-top-detail{color:#F8F988;font-weight:600}
+
+#projects{margin-top:18px}
+.project{display:flex;gap:18px;align-items:flex-start;margin-bottom:18px}
+.left-image{flex:0 0 200px}
+.left-image img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.project-detail{flex:1}
+.project-detail p a{color:var(--accent);font-weight:600;text-decoration:none}
+.project-detail ul{margin:8px 0 0 18px;color:var(--muted)}
+
+.skill{display:inline-block;background:rgba(255,255,255,0.03);color:var(--muted);padding:6px 10px;border-radius:20px;margin-right:8px;margin-top:8px;font-size:12px}
+
+@media (max-width:900px){
+    .content{flex-direction:column;padding:0 8px}
+    .left-content{width:100%;position:relative;order:0}
+    .project{flex-direction:column}
+    .left-image{width:100%}
 }
 
-/* display avatar */
-.avatar {
-    text-align: center;
+@media (max-width:480px){
+    .container{padding:24px 12px}
+    .avatar img{width:110px;height:110px}
+    .left-content h1{font-size:18px}
 }
 
-.avatar img {
-    vertical-align: middle;
-    width: 177px;
-    height: 229px;
-    border-radius: 50%;
-}
+/* small tweaks for links */
+a{color:var(--accent)}
 
-/* menu for right content */
-.menu {
-    margin-right: 5%;
-    margin-top: 10%;
-    text-align: right;
-}
-
-.menu ul {
-    list-style-type: none;
-    font-size: 24px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu li {
-    margin-bottom: 5px;
-}
-
-.menu a:hover {
-    color: #A6FF96;
-}
-
-/* this is for social media contact links */
-.social-media {
-    float: right;
-}
-
-.fa {
-    padding: 10px;
-    font-size: 30px;
-    width: 25px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
-
-.fa-google {
-    background: #dd4b39;
-    color: white;
-}
-
-.fa-linkedin {
-    background: #007bb5;
-    color: white;
-}
-
-.fa-twitter {
-    background: #55ACEE;
-    color: white;
-}
-
-/* This side is for about, experience, projects */
-.right-content {
-    width: 70%;
-    float: right;
-}
-
-/* This is for experience part */
-
-.top-detail {
-    overflow: hidden;
-}
-
-.left-top-detail {
-    float: left;
-    color: #F8F988;
-}
-
-.right-top-detail {
-    float: right;
-}
-
-.bottom-detail li {
-    margin-bottom: 5px;
-}
-
-/* this is for projects part */
-#projects {
-    margin-top: 10px;
-}
-
-.project {
-    overflow: hidden;
-}
-
-/* images of projects */
-.left-image {
-    float: left;
-    width: 20%;
-    margin: 3% 0;
-}
-
-.left-image img {
-    width: 275px;
-    height: 260px;
-}
-
-/* this is for prjects detail */
-.project-detail {
-    float: right;
-    width: 70%;
-}
-
-.project-detail li {
-    margin: 1% 0;
-}
-
-.project-detail p {
-    font-weight: bold;
-    margin: 3% 0;
-    font-size: 25px;
-}
-
-/* this is for skills set below the projects */
-p.skill {
-    font-size: 16pt;
-    border-radius: 25px;
-    border: 2px solid #73AD21;
-    padding: 10px;
-    width: 90px;
-    height: 25px;
-    float: left;
-    text-align: center;
-    margin-right: 10px
-}
-
-/* responsive web design  */
-@media only screen and (max-width: 1600px) {
-    .container {
-        font-size: 16pt;
-    }
-    .left-image img {
-        width: 325px;
-        height: 300px;
-    }
-    .left-image {
-        float: none;
-    }
-    .project-detail {
-        float: none;
-    }
-    p.skill {
-        font-size: 12pt;
-        padding: 5px;
-        width: 76px;
-        height: 19px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    h1,h2 {
-        text-align: center;
-    }
-    .content {
-        width: 55%;
-    }
-    .project {
-        margin-bottom: 10px;
-    }
-    .left-top-detail {
-        float: none;
-        display: block;
-    }
-    .right-top-detail {
-        float: none;
-        display: block;
-        font-style: italic;
-    }
-    .left-content {
-        width: 100%;
-        float: none;
-        position: relative;
-    }
-    .right-content {
-        width: 100%;
-        float: none;
-    }
-    .menu {
-        display: none;
-    }
-    .social-media {
-        float: none;
-        text-align: center;
-        margin-top: 20px;
-    }
-    .left-image img {
-        width: 400px;
-        height: 328px;
-    }
-    .left-image {
-        float: none;
-        width: 100%;
-        margin: 0 0;
-        text-align: center;
-    }
-    .project-detail {
-        float: none;
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .container {
-        font-size: 12pt;
-    }
-    .left-image img {
-        width: 200px;
-        height: 185px;
-    }
-    p.skill {
-        font-size: 10pt;
-        width: 69px;
-        height: 16px;
-    }
-    .right-top-detail {
-        font-size: 10pt;
-    }
-}
 
