@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooting Game Project Details</title>
+    <style>
+        :root {
+            --bg: #f7f9ff;
+            --card: #ffffff;
+            --text: #14243c;
+            --muted: #5f7389;
+            --accent: #1e5fb3;
+            --accent2: #4c86d9;
+            --border: #d6e0f2;
+            --shadow: 0 12px 30px rgba(20, 44, 87, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef4ff, #f9fbff);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 24px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 28px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 28px;
+        }
+
+        .hero img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            height: 100%;
+            min-height: 300px;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .tagline {
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .btn-row {
+            margin-top: 18px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            background: var(--accent);
+            padding: 10px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+        }
+
+        .btn.secondary {
+            background: #6780a4;
+        }
+
+        .section {
+            margin-top: 26px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: 24px 28px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .stack span {
+            background: #e9f1ff;
+            color: var(--accent);
+            border: 1px solid #c8d8f6;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        @media (max-width: 760px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="hero">
+            <div>
+                <p class="tagline">Java Game Development</p>
+                <h1>Shooting Game</h1>
+                <p>
+                    The Shooting Game is an interactive Java-based project where the player controls a character and eliminates a stream of moving enemies.
+                    It focuses on game mechanics, object-oriented design, and responsive input handling for a fun, engaging experience.
+                </p>
+                <div class="btn-row">
+                    <a class="btn" href="#" target="_blank" rel="noreferrer">Play Demo</a>
+                    <a class="btn secondary" href="../index.html">Back to Portfolio</a>
+                </div>
+            </div>
+            <img src="../images/shoot.gif" alt="Shooting Game project preview">
+        </div>
+
+        <div class="section">
+            <h2>Project Overview</h2>
+            <p>
+                This project was created to explore gameplay programming concepts in a structured, maintainable way.
+                The design emphasizes modular logic, real-time interaction, and clean object-based architecture.
+            </p>
+            <ul>
+                <li>Built a browser-free arcade-style game using Java and JavaFX visuals.</li>
+                <li>Implemented responsive controls for player movement and enemy elimination.</li>
+                <li>Applied object-oriented programming principles to manage game entities effectively.</li>
+                <li>Focused on gameplay smoothness, modular state logic, and user engagement.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Dynamic enemy movement that creates an active challenge experience.</li>
+                <li>Player-controlled actions with clear interaction rules and scoring logic.</li>
+                <li>Game loop structure to create a continuous and responsive play flow.</li>
+                <li>Modular reuse of classes and objects to improve maintainability.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Technology Stack</h2>
+            <div class="stack">
+                <span>Java</span>
+                <span>JavaFX</span>
+                <span>OOP</span>
+                <span>Game Logic</span>
+                <span>UI Design</span>
+                <span>Event Handling</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

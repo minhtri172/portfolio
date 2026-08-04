@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicting Fraud Transactions Project Details</title>
+    <style>
+        :root {
+            --bg: #f8f7ff;
+            --card: #ffffff;
+            --text: #1d1a33;
+            --muted: #5f5b7b;
+            --accent: #5a3df0;
+            --accent2: #7c63f7;
+            --border: #ddd8ff;
+            --shadow: 0 12px 30px rgba(46, 29, 105, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #f3f0ff, #faf9ff);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 24px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 28px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 28px;
+        }
+
+        .hero img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            height: 100%;
+            min-height: 300px;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .tagline {
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .btn-row {
+            margin-top: 18px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            background: var(--accent);
+            padding: 10px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+        }
+
+        .btn.secondary {
+            background: #786da8;
+        }
+
+        .section {
+            margin-top: 26px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: 24px 28px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .stack span {
+            background: #f0ebff;
+            color: var(--accent);
+            border: 1px solid #d7ccff;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        @media (max-width: 760px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="hero">
+            <div>
+                <p class="tagline">Machine Learning Project</p>
+                <h1>Predicting Fraud Transactions</h1>
+                <p>
+                    This project applies machine learning to transactional data in order to detect potentially fraudulent activity.
+                    It emphasizes rigorous data preparation, class balancing, model evaluation, and practical comparison of learning approaches.
+                </p>
+                <div class="btn-row">
+                    <a class="btn" href="../files/Final_Project.pdf" target="_blank" rel="noreferrer">View Report</a>
+                    <a class="btn secondary" href="../index.html">Back to Portfolio</a>
+                </div>
+            </div>
+            <img src="../images/fraud.png" alt="Fraud prediction project preview">
+        </div>
+
+        <div class="section">
+            <h2>Project Overview</h2>
+            <p>
+                The goal of the project is to build a reliable fraud detection model using real-world style transaction patterns.
+                A strong focus was placed on selecting effective preprocessing and balancing strategies to improve the model’s predictive strength.
+            </p>
+            <ul>
+                <li>Analyzed transaction data to predict fraudulent behavior using machine learning pipelines.</li>
+                <li>Applied sampling methods to address class imbalance and improve model training quality.</li>
+                <li>Performed data cleaning and preprocessing to reduce noise and improve generalization.</li>
+                <li>Compared multiple algorithms to determine the strongest-performing model for the task.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Data exploration and preparation for structured fraud analysis.</li>
+                <li>Use of sampling methods to build a more balanced training dataset.</li>
+                <li>Comparison of Decision Tree, Logistic Regression, and Neural Network models.</li>
+                <li>Evaluation of model performance to guide algorithm choice.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Technology Stack</h2>
+            <div class="stack">
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Data Preprocessing</span>
+                <span>Decision Tree</span>
+                <span>Logistic Regression</span>
+                <span>Neural Network</span>
+                <span>Model Evaluation</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

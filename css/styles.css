@@ -56,12 +56,12 @@ body{
 .left-top-detail{color:#F8F988;font-weight:600}
 
 #projects{margin-top:18px}
-.project{display:flex;gap:18px;align-items:flex-start;margin-bottom:18px}
-.left-image{flex:0 0 200px}
-.left-image img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.project{display:flex;gap:18px;align-items:center;margin-bottom:18px}
+.left-image{flex:0 0 200px;display:flex;align-items:center;justify-content:center}
+.left-image img{width:100%;height:140px;object-fit:cover;border-radius:8px;display:block}
 .project-detail{flex:1}
 .project-detail p a{color:var(--accent);font-weight:600;text-decoration:none}
-.project-detail ul{margin:8px 0 0 18px;color:var(--muted)}
+.project-detail ul{margin:8px 0 0 14px;padding-left:16px;color:var(--muted)}
 
 .skill{display:inline-block;background:rgba(255,255,255,0.03);color:var(--muted);padding:6px 10px;border-radius:20px;margin-right:8px;margin-top:8px;font-size:12px}
 

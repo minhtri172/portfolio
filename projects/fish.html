@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Sharing Project Details</title>
+    <style>
+        :root {
+            --bg: #f5fbff;
+            --card: #ffffff;
+            --text: #14324a;
+            --muted: #55758a;
+            --accent: #1d7ca8;
+            --accent2: #2f9ed0;
+            --border: #d9ebf5;
+            --shadow: 0 12px 30px rgba(18, 72, 105, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #edf9ff, #f9fcff);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 24px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 28px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 28px;
+        }
+
+        .hero img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            height: 100%;
+            min-height: 300px;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .tagline {
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .btn-row {
+            margin-top: 18px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            background: var(--accent);
+            padding: 10px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+        }
+
+        .btn.secondary {
+            background: #5a7e93;
+        }
+
+        .section {
+            margin-top: 26px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: 24px 28px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .stack span {
+            background: #e7f6fd;
+            color: var(--accent);
+            border: 1px solid #c6e7f6;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        @media (max-width: 760px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="hero">
+            <div>
+                <p class="tagline">Cloud-Native Web Application</p>
+                <h1>Fish Sharing</h1>
+                <p>
+                    Fish Sharing is a scalable, user-friendly web platform designed to help people share and explore fish-related content in a reliable cloud environment.
+                    The project emphasizes high availability, automated deployment, and secure access through modern AWS services.
+                </p>
+                <div class="btn-row">
+                    <a class="btn" href="https://minhtri172.github.io/hw5_v2/" target="_blank" rel="noreferrer">Live Demo</a>
+                    <a class="btn secondary" href="../index.html">Back to Portfolio</a>
+                </div>
+            </div>
+            <img src="../images/fish.jpg" alt="Fish Sharing project preview">
+        </div>
+
+        <div class="section">
+            <h2>Project Overview</h2>
+            <p>
+                This project focuses on building a resilient web application architecture that can scale smoothly as demand grows.
+                It demonstrates how to combine frontend delivery, backend hosting, storage, and automation to create a production-style system.
+            </p>
+            <ul>
+                <li>Designed and deployed a web application with strong reliability and availability.</li>
+                <li>Integrated cloud-native services for content delivery, storage, and automation.</li>
+                <li>Improved application performance and resilience with load balancing and autoscaling.</li>
+                <li>Implemented secure HTTPS delivery and route management for a polished user experience.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Highly available application infrastructure using EC2, Nginx, an Application Load Balancer, and Auto Scaling Groups.</li>
+                <li>Continuous deployment pipeline with CodePipeline and CodeDeploy to streamline delivery.</li>
+                <li>Cloud storage and persistence with S3 and DynamoDB.</li>
+                <li>Serverless scaling support using Lambda and CloudWatch scheduling to reduce unnecessary cost.</li>
+                <li>Secure, optimized delivery through Route 53, CloudFront, and ACM.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Technology Stack</h2>
+            <div class="stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>jQuery</span>
+                <span>AWS EC2</span>
+                <span>Nginx</span>
+                <span>CloudFront</span>
+                <span>Route 53</span>
+                <span>S3</span>
+                <span>DynamoDB</span>
+                <span>Lambda</span>
+                <span>CodePipeline</span>
+                <span>CodeDeploy</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
