@@ -1,191 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fish Sharing Project Details</title>
+    <meta name="description" content="Fish Sharing is a highly available AWS-hosted community web application for sharing fishing catches.">
+    <title>Fish Sharing | Project Details</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-details.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg: #f5fbff;
-            --card: #ffffff;
-            --text: #14324a;
-            --muted: #55758a;
-            --accent: #1d7ca8;
-            --accent2: #2f9ed0;
-            --border: #d9ebf5;
-            --shadow: 0 12px 30px rgba(18, 72, 105, 0.12);
+        .detail-page {
+            width: min(1000px, calc(100% - 48px));
+            margin: 48px auto;
         }
 
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #edf9ff, #f9fcff);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        .wrap {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 24px;
-        }
-
-        .hero {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 28px;
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            padding: 28px;
-        }
-
-        .hero img {
-            width: 100%;
-            border-radius: 16px;
-            object-fit: cover;
-            height: 100%;
-            min-height: 300px;
-        }
-
-        h1 {
-            margin-top: 0;
-            font-size: 2rem;
-        }
-
-        .tagline {
-            color: var(--accent);
+        .detail-back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--accent-dark);
+            font-size: 14px;
             font-weight: 700;
-            letter-spacing: 0.02em;
-        }
-
-        .btn-row {
-            margin-top: 18px;
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
             text-decoration: none;
-            color: white;
-            background: var(--accent);
-            padding: 10px 16px;
-            border-radius: 999px;
-            font-weight: 700;
         }
 
-        .btn.secondary {
-            background: #5a7e93;
-        }
-
-        .section {
-            margin-top: 26px;
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 18px;
+        .detail-hero,
+        .detail-section {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: var(--surface);
             box-shadow: var(--shadow);
-            padding: 24px 28px;
         }
 
-        .section h2 {
-            margin-top: 0;
-            color: var(--accent);
+        .detail-hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+            gap: 32px;
+            align-items: center;
+            padding: 32px;
         }
 
-        ul {
-            padding-left: 20px;
+        .detail-hero h1 {
+            margin: 0 0 14px;
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(32px, 5vw, 46px);
+            font-weight: 800;
+            letter-spacing: -1.6px;
+            line-height: 1.15;
         }
 
-        .stack {
+        .detail-hero-copy {
+            color: var(--muted);
+        }
+
+        .detail-hero img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 11px;
+            background: var(--soft-accent);
+        }
+
+        .detail-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            margin-top: 22px;
         }
 
-        .stack span {
-            background: #e7f6fd;
-            color: var(--accent);
-            border: 1px solid #c6e7f6;
-            padding: 6px 12px;
+        .detail-button {
+            display: inline-block;
+            padding: 10px 15px;
+            border: 1px solid var(--accent);
             border-radius: 999px;
-            font-size: 0.92rem;
+            background: var(--accent);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .detail-button.secondary {
+            background: transparent;
+            color: var(--accent-dark);
+        }
+
+        .detail-section {
+            margin-top: 20px;
+            padding: 25px 30px;
+        }
+
+        .detail-section h2 {
+            margin: 0 0 12px;
+            font-family: "Manrope", sans-serif;
+            font-size: 22px;
+            letter-spacing: -0.5px;
+        }
+
+        .detail-section p,
+        .detail-section li {
+            color: var(--muted);
+        }
+
+        .detail-section ul {
+            margin-bottom: 0;
+            padding-left: 20px;
+        }
+
+        .detail-section li {
+            margin: 7px 0;
+        }
+
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            margin-top: 18px;
+        }
+
+        .architecture-figure {
+            min-width: 0;
+            margin: 0;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: #fbfcfb;
+        }
+
+        .architecture-figure img {
+            display: block;
+            width: 100%;
+            height: min(62vh, 620px);
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .architecture-figure figcaption {
+            padding: 12px 15px;
+            border-top: 1px solid var(--line);
+            color: var(--ink);
+            font-family: "Manrope", sans-serif;
+            font-size: 14px;
             font-weight: 700;
         }
 
-        @media (max-width: 760px) {
-            .hero {
+        @media (max-width: 700px) {
+            .detail-page {
+                width: min(100% - 32px, 560px);
+                margin: 20px auto;
+            }
+
+            .detail-hero {
                 grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 22px;
+            }
+
+            .detail-hero img {
+                grid-row: 1;
+            }
+
+            .detail-section {
+                padding: 21px;
+            }
+
+            .architecture-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .architecture-figure img {
+                height: min(55vh, 500px);
             }
         }
     </style>
 </head>
+
 <body>
-    <div class="wrap">
-        <div class="hero">
+    <main class="project-detail-page detail-page">
+        <a class="detail-back" href="../index.html#projects">← Back to projects</a>
+
+        <section class="detail-hero" aria-labelledby="project-title">
             <div>
-                <p class="tagline">Cloud-Native Web Application</p>
-                <h1>Fish Sharing</h1>
-                <p>
-                    Fish Sharing is a scalable, user-friendly web platform designed to help people share and explore fish-related content in a reliable cloud environment.
-                    The project emphasizes high availability, automated deployment, and secure access through modern AWS services.
-                </p>
-                <div class="btn-row">
-                    <a class="btn" href="https://minhtri172.github.io/hw5_v2/" target="_blank" rel="noreferrer">Live Demo</a>
-                    <a class="btn secondary" href="../index.html">Back to Portfolio</a>
+                <p class="eyebrow">Cloud application · AWS</p>
+                <h1 id="project-title">Fish Sharing</h1>
+                <p class="detail-hero-copy">A community web application for sharing and exploring fishing catches. The project combines a responsive web experience with AWS infrastructure designed for reliable delivery and scaling.</p>
+                <div class="detail-actions">
+                    <a class="detail-button" href="https://minhtri172.github.io/hw5_v2/" target="_blank" rel="noopener noreferrer">View live demo ↗</a>
+                    <a class="detail-button secondary" href="../index.html#projects">Back to portfolio</a>
                 </div>
             </div>
-            <img src="../images/fish.jpg" alt="Fish Sharing project preview">
-        </div>
+            <img src="../images/fish_web.png" alt="Fish Sharing community website showing recent fishing catches">
+        </section>
 
-        <div class="section">
-            <h2>Project Overview</h2>
-            <p>
-                This project focuses on building a resilient web application architecture that can scale smoothly as demand grows.
-                It demonstrates how to combine frontend delivery, backend hosting, storage, and automation to create a production-style system.
-            </p>
+        <section class="detail-section">
+            <h2>Project overview</h2>
+            <p>Fish Sharing is a web platform where people can share and explore fishing content. The project also demonstrates how to deliver a web application through AWS services, with load balancing, autoscaling, automated deployments, and secure content delivery.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Architecture</h2>
+            <p>The AWS architecture combines EC2 application servers with a load balancer and Auto Scaling group, while cloud services support delivery, storage, deployment automation, and monitoring.</p>
+            <div class="architecture-grid">
+                <figure class="architecture-figure">
+                    <img src="../images/fish.jpg" alt="Fish Sharing AWS architecture with CloudFront, Route 53, load balancing, EC2 autoscaling, S3, and deployment services" loading="lazy">
+                    <figcaption>AWS deployment architecture</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <h2>Key features</h2>
             <ul>
-                <li>Designed and deployed a web application with strong reliability and availability.</li>
-                <li>Integrated cloud-native services for content delivery, storage, and automation.</li>
-                <li>Improved application performance and resilience with load balancing and autoscaling.</li>
-                <li>Implemented secure HTTPS delivery and route management for a polished user experience.</li>
+                <li>Community interface for browsing and sharing fishing catches.</li>
+                <li>EC2 application servers behind a load balancer with Auto Scaling.</li>
+                <li>Automated deployment using CodePipeline and CodeDeploy.</li>
+                <li>Route 53, CloudFront, and ACM support domain routing and HTTPS delivery.</li>
+                <li>S3 and DynamoDB support image and application data storage.</li>
+                <li>CloudWatch monitoring and budget alerts help track system health and costs.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>Key Features</h2>
-            <ul>
-                <li>Highly available application infrastructure using EC2, Nginx, an Application Load Balancer, and Auto Scaling Groups.</li>
-                <li>Continuous deployment pipeline with CodePipeline and CodeDeploy to streamline delivery.</li>
-                <li>Cloud storage and persistence with S3 and DynamoDB.</li>
-                <li>Serverless scaling support using Lambda and CloudWatch scheduling to reduce unnecessary cost.</li>
-                <li>Secure, optimized delivery through Route 53, CloudFront, and ACM.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Technology Stack</h2>
-            <div class="stack">
+        <section class="detail-section">
+            <h2>Technology stack</h2>
+            <div class="skill-list">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
                 <span>jQuery</span>
                 <span>AWS EC2</span>
-                <span>Nginx</span>
-                <span>CloudFront</span>
-                <span>Route 53</span>
+                <span>Auto Scaling</span>
+                <span>Load Balancer</span>
                 <span>S3</span>
                 <span>DynamoDB</span>
                 <span>Lambda</span>
+                <span>CloudFront</span>
+                <span>Route 53</span>
                 <span>CodePipeline</span>
                 <span>CodeDeploy</span>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
+
 </html>

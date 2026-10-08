@@ -4,163 +4,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minh Le</title>
+    <meta name="description" content="The portfolio of Minh Le, a software engineer focused on dependable software, cloud platforms, and DevOps.">
+    <title>Minh Le | Software Engineer</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <div class="content">
-            <div class="left-content">
-                <h1>I'm Minh</h1>
-                <div class="avatar">
-                    <img src="images/my_pic.jpg" alt="Avatar">
-                </div>
-                <h2>A Software Engineer.</h2>
-                <p>C/C++ | Java | Python | Cloud & DevOps | Azure | AWS | Kubernetes | Jenkins | CI/CD</p>
-                
-                <div class="menu">
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                    </ul>
-                </div>
-                <div class="social-media">
-                    <a href="https://linkedin.com/in/mle217" class="fa fa-linkedin"></a>
-                    <a href="mailto:minhtri54cntt@gmail.com" class="fa fa-google"></a>
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                </div>
+    <div class="page-shell">
+        <aside class="profile">
+            <a class="brand" href="#about" aria-label="Minh Le, home">ML<span>.</span></a>
+            <div class="avatar">
+                <img src="images/my_pic.jpg" alt="Portrait of Minh Le">
             </div>
-            <div class="right-content">
-                <div id="about">
-                    <h1>About Me</h1>
-                    <p>
-                        I am a passionate Software Engineer who enjoys solving complex problems and continuously learning new technologies. I am persistent when facing technical challenges and view every project as an opportunity to improve my skills and deliver reliable solutions.
-                    </p>
-                    <p>
-                        I currently work as a Software Engineer for the U.S. Air Force, where I develop and maintain mission-critical aircraft software. This experience has strengthened my expertise in building high-quality, dependable software while working in a disciplined engineering environment.
-                    <p>
-                        Outside of work, I continue expanding my knowledge through technical books, hands-on projects, and emerging technologies. I enjoy hiking, playing the guitar, and cooking, which help me maintain creativity and balance.
-                    </p>
-                </div>
-                <div id="experience">
-                    <h1>Working Experience</h1>
-                    <div class="detail">
-                        <div class="top-detail">
-                            <span class="left-top-detail">October 2022 - Present</span>
-                            <span class="right-top-detail">Tinker Air Force Base, Oklahoma City, OK</span>
-                        </div>
-                        <div class="bottom-detail">
-                            <p><b>Computer Scientist</b></p>
-                            <ul>
-                                <li>Built, packaged, and released software for simulation and testing environments while maintaining the aircraft simulation infrastructure and providing technical support.</li>
-                                <li>Administered ClearCase on Linux and Windows, managing branches, labels, views, and user permissions, and developed Perl scripts to automate configuration management workflows.</li>
-                                <li>Investigated and resolved software defects, improving application stability and supporting successful software releases.</li>
-                                <li>Utilized Azure DevOps for version control, work item tracking, and code reviews to support collaborative software development and maintain code quality.</li>                    
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <div class="top-detail">
-                            <div class="top-detail">
-                                <span class="left-top-detail">Sep - Dec 2019</span>
-                                <span class="right-top-detail">Bunker Hill Community College, Boston, MA</span>
-                            </div>
-                        </div>
-                        <div class="bottom-detail">
-                            <p><b>Math Tutor</b></p>
-                            <ul>
-                                <li>Assisted students with their difficult homework questions for pre-calculus.</li>
-                                <li>Helped students improve their math skills by explaining mathematical concepts in a
-                                    way they could understand</li>
-                                <li>Assessed students’ learning progress and engagement throughout instructional
-                                    sessions.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="projects">
-                    <h1>Personal Projects</h1>
-                    <div class="project">
-                        <div class="left-image">
-                            <img src="images/fish_web.png"></a>
-                        </div>
-                        <div class="project-detail">
-                            <span>
-                                <p><a href="projects/fish.html">Fish Sharing</a></p>
-                            </span>
-                            <ul>
-                                <li>Built a highly available Flask web application on AWS using EC2, Nginx, Load Balancer, and Auto Scaling Group.</li>
-                                <li>Automated deployments with CodePipeline and CodeDeploy</li>
-                                <li>Configured Route 53, CloudFront, and ACM to enable secure HTTPS access and improve application reliability.</li>
-                            </ul>
-                            <p class="skill">AWS</p>
-                            <p class="skill">EC2</p>
-                            <p class="skill">Nginx</p>
-                            <p class="skill">CloudFront</p>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <div class="left-image">
-                            <img src="images/bookstore.gif">
-                        </div>
-                        <div class="project-detail">
-                            <span>
-                                <p><a href="projects/bookstore.html">Online Bookstore.</a></p>
-                            </span>
-                            <ul>
-                                <li>Developed an online bookstore application enabling users to purchase books and administrators to manage site content.</li>
-                                <li>Built an admin dashboard connected to the database to add, update, and remove book records.</li>
-                                <li>Implemented Java Servlets to retrieve and display book data dynamically on the user interface.</li>
-                            </ul>
-                            <p class="skill">Java</p>
-                            <p class="skill">JavaFX</p>
-                            <p class="skill">SQL</p>
-                            <p class="skill">Servlet</p>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <div class="left-image">
-                            <img src="images/shoot.gif">
-                        </div>
-                        <div class="project-detail">
-                            <span>
-                                <p><a href="projects/shooting.html">Shooting Game.</a></p>
-                            </span>
-                            <ul>
-                                <li>Developed an interactive game where users control a player object to eliminate dynamically moving enemies.</li>
-                                <li>Applied object-oriented programming principles to design modular, maintainable game logic.</li>
-                            </ul>
-                            <p class="skill">Java</p>
-                            <p class="skill">JavaFX</p>
-                            <p class="skill">OOP</p>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <div class="left-image">
-                            <img src="images/fraud.png"></a>
-                        </div>
-                        <div class="project-detail">
-                            <span>
-                                <p><a href="projects/fraud.html">Predicting Fraud Transactions.</a></p>
-                            </span>
-                            <ul>
-                                <li>Analyzed transaction data to predict fraudulent activity using machine learning techniques.</li>
-                                <li>Performed data preprocessing and cleaning to reduce the risk of overfitting and underfitting.</li>
-                                <li>Evaluated and compared Decision Tree, Logistic Regression, and Neural Network models to identify the best-performing approach.</li>
-                            </ul>
-                            <p class="skill">Python</p>
-                            <p class="skill">Machine Learning</p>
-                            <p class="skill">Data Analysis</p>
-                        </div>
-                    </div>
-                </div>
+            <p class="eyebrow">Software engineer</p>
+            <h1>Hi, I’m Minh.</h1>
+            <p class="profile-summary">I build reliable software and the systems that help it run.</p>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+            </nav>
+
+            <div class="profile-links">
+                <a href="https://linkedin.com/in/mle217" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                <a href="mailto:minhtri54cntt@gmail.com">Email <span aria-hidden="true">↗</span></a>
             </div>
-        </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="intro section" id="about">
+                <p class="eyebrow">About</p>
+                <h2>Thoughtful engineering.<br><span>Dependable results.</span></h2>
+                <p class="intro-copy">I’m a software engineer who enjoys solving complex problems and making dependable systems easier to build, release, and maintain.</p>
+                <p>I currently work as a Computer Scientist for the U.S. Air Force, developing and maintaining software for aircraft simulation and testing. Working in a disciplined engineering environment has taught me to value quality, reliability, and clear collaboration.</p>
+                <p>Beyond work, I learn through books and hands-on projects. I also enjoy hiking, playing guitar, and cooking.</p>
+                <div class="skill-list" aria-label="Areas of experience">
+                    <span>C/C++</span>
+                    <span>Java</span>
+                    <span>Python</span>
+                    <span>Cloud &amp; DevOps</span>
+                    <span>Azure</span>
+                    <span>AWS</span>
+                    <span>Kubernetes</span>
+                    <span>CI/CD</span>
+                </div>
+            </section>
+
+            <section class="section" id="experience">
+                <div class="section-heading">
+                    <p class="eyebrow">Career</p>
+                    <h2>Experience</h2>
+                </div>
+
+                <article class="experience-card">
+                    <div class="experience-meta">
+                        <p class="date">October 2022 — Present</p>
+                        <p>Tinker Air Force Base · Oklahoma City, OK</p>
+                    </div>
+                    <div class="experience-body">
+                        <h3>Computer Scientist</h3>
+                        <ul>
+                            <li>Built, packaged, and released software for simulation and testing environments, while maintaining aircraft simulation infrastructure and providing technical support.</li>
+                            <li>Administered ClearCase on Linux and Windows, managing branches, labels, views, and permissions; wrote Perl scripts to automate configuration management workflows.</li>
+                            <li>Investigated and resolved software defects to improve application stability and support successful releases.</li>
+                            <li>Used Azure DevOps for version control, work tracking, and code reviews to support collaboration and maintain code quality.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="experience-card">
+                    <div class="experience-meta">
+                        <p class="date">September — December 2019</p>
+                        <p>Bunker Hill Community College · Boston, MA</p>
+                    </div>
+                    <div class="experience-body">
+                        <h3>Math Tutor</h3>
+                        <ul>
+                            <li>Helped students work through pre-calculus problems and strengthen their math skills.</li>
+                            <li>Explained mathematical concepts in accessible ways and adapted support to students’ needs.</li>
+                            <li>Monitored student progress and engagement throughout tutoring sessions.</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="section" id="projects">
+                <div class="section-heading">
+                    <p class="eyebrow">Selected work</p>
+                    <h2>Projects</h2>
+                    <p>A selection of applications and experiments I’ve built.</p>
+                </div>
+
+                <article class="project-card">
+                    <a class="project-image" href="projects/safe-button.html" aria-label="View Safe Button project details">
+                        <img src="images/safe-button-demo.gif" alt="Animated demo of the Safe Button daily check-in application" loading="lazy">
+                    </a>
+                    <div class="project-detail">
+                        <p class="project-type">Cloud application · Multi-cloud</p>
+                        <h3><a href="projects/safe-button.html">Safe Button</a></h3>
+                        <p>Built a Flask daily check-in dashboard that lets users share a timestamped “I am safe” update with a trusted contact.</p>
+                        <ul>
+                            <li>Created a Google Cloud version with an automated Cloud Build workflow.</li>
+                            <li>Developed an AWS version with Cognito sign-in, DynamoDB storage, and an EKS deployment pipeline.</li>
+                        </ul>
+                        <div class="project-tags"><span>Flask</span><span>Google Cloud</span><span>AWS</span><span>Docker</span><span>Kubernetes</span></div>
+                        <div class="project-links">
+                            <a href="https://okcfisher.org/" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+                            <a href="https://github.com/minhtri172/safe-button/tree/main" target="_blank" rel="noopener noreferrer">Google Cloud branch ↗</a>
+                            <a href="https://github.com/minhtri172/safe-button/tree/aws-project2" target="_blank" rel="noopener noreferrer">AWS branch ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <a class="project-image" href="projects/fish.html" aria-label="View Fish Sharing project">
+                        <img src="images/fish_web.png" alt="Preview of the Fish Sharing web application" loading="lazy">
+                    </a>
+                    <div class="project-detail">
+                        <p class="project-type">Cloud application</p>
+                        <h3><a href="projects/fish.html">Fish Sharing</a></h3>
+                        <p>Built a highly available Flask application on AWS with EC2, Nginx, a load balancer, and an Auto Scaling group.</p>
+                        <ul>
+                            <li>Automated deployments with CodePipeline and CodeDeploy.</li>
+                            <li>Configured Route 53, CloudFront, and ACM for secure HTTPS access and improved reliability.</li>
+                        </ul>
+                        <div class="project-tags"><span>AWS</span><span>EC2</span><span>Nginx</span><span>CloudFront</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <a class="project-image" href="projects/bookstore.html" aria-label="View Online Bookstore project">
+                        <img src="images/bookstore.gif" alt="Preview of the online bookstore" loading="lazy">
+                    </a>
+                    <div class="project-detail">
+                        <p class="project-type">Web application</p>
+                        <h3><a href="projects/bookstore.html">Online Bookstore</a></h3>
+                        <p>Developed an online bookstore where customers can browse and purchase books while administrators manage the catalog.</p>
+                        <ul>
+                            <li>Built a database-connected dashboard to add, update, and remove book records.</li>
+                            <li>Used Java Servlets to retrieve and display book data dynamically.</li>
+                        </ul>
+                        <div class="project-tags"><span>Java</span><span>JavaFX</span><span>SQL</span><span>Servlets</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <a class="project-image" href="projects/shooting.html" aria-label="View Shooting Game project">
+                        <img src="images/shoot.gif" alt="Preview of the shooting game" loading="lazy">
+                    </a>
+                    <div class="project-detail">
+                        <p class="project-type">Game development</p>
+                        <h3><a href="projects/shooting.html">Shooting Game</a></h3>
+                        <p>Created an interactive game where players move through a level and respond to dynamically moving enemies.</p>
+                        <ul>
+                            <li>Applied object-oriented programming to create modular, maintainable game logic.</li>
+                        </ul>
+                        <div class="project-tags"><span>Java</span><span>JavaFX</span><span>OOP</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <a class="project-image" href="projects/fraud.html" aria-label="View Fraud Prediction project">
+                        <img src="images/fraud.png" alt="Fraud transaction prediction project graphic" loading="lazy">
+                    </a>
+                    <div class="project-detail">
+                        <p class="project-type">Machine learning</p>
+                        <h3><a href="projects/fraud.html">Predicting Fraudulent Transactions</a></h3>
+                        <p>Analyzed transaction data and compared machine-learning models to identify fraudulent activity.</p>
+                        <ul>
+                            <li>Prepared and cleaned data, then evaluated Decision Tree, Logistic Regression, and Neural Network models.</li>
+                        </ul>
+                        <div class="project-tags"><span>Python</span><span>Machine Learning</span><span>Data Analysis</span></div>
+                    </div>
+                </article>
+            </section>
+
+            <footer class="footer">
+                <p>Thanks for stopping by.</p>
+                <a href="mailto:minhtri54cntt@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+            </footer>
+        </main>
     </div>
 </body>
 

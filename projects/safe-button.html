@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Safe Button is a Flask daily check-in dashboard with Google Cloud and AWS implementations.">
+    <title>Safe Button | Project Details</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-details.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .detail-page {
+            width: min(1000px, calc(100% - 48px));
+            margin: 48px auto;
+        }
+
+        .detail-back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--accent-dark);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .detail-hero,
+        .detail-section {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: var(--surface);
+            box-shadow: var(--shadow);
+        }
+
+        .detail-hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+            gap: 32px;
+            align-items: center;
+            padding: 32px;
+        }
+
+        .detail-hero h1 {
+            margin: 0 0 14px;
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(32px, 5vw, 46px);
+            font-weight: 800;
+            letter-spacing: -1.6px;
+            line-height: 1.15;
+        }
+
+        .detail-hero-copy {
+            color: var(--muted);
+        }
+
+        .detail-hero img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 11px;
+            background: var(--soft-accent);
+        }
+
+        .detail-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .detail-button {
+            display: inline-block;
+            padding: 10px 15px;
+            border: 1px solid var(--accent);
+            border-radius: 999px;
+            background: var(--accent);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .detail-button.secondary {
+            background: transparent;
+            color: var(--accent-dark);
+        }
+
+        .live-demo-frame {
+            width: 100%;
+            height: clamp(520px, 72vh, 760px);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--paper);
+        }
+
+        .live-demo-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .live-demo-link:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .detail-section {
+            margin-top: 20px;
+            padding: 25px 30px;
+        }
+
+        .detail-section h2 {
+            margin: 0 0 12px;
+            font-family: "Manrope", sans-serif;
+            font-size: 22px;
+            letter-spacing: -0.5px;
+        }
+
+        .detail-section p,
+        .detail-section li {
+            color: var(--muted);
+        }
+
+        .detail-section ul {
+            margin-bottom: 0;
+            padding-left: 20px;
+        }
+
+        .detail-section li {
+            margin: 7px 0;
+        }
+
+        .implementation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .implementation {
+            padding: 19px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: #fbfcfb;
+        }
+
+        .implementation h3 {
+            margin: 0 0 8px;
+            font-family: "Manrope", sans-serif;
+            font-size: 17px;
+        }
+
+        .implementation p {
+            margin: 0;
+        }
+
+        .implementation a {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .implementation a:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .architecture-figure {
+            min-width: 0;
+            margin: 0;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: #fbfcfb;
+        }
+
+        .architecture-figure img {
+            display: block;
+            width: 100%;
+            height: min(62vh, 620px);
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .architecture-figure figcaption {
+            padding: 12px 15px;
+            border-top: 1px solid var(--line);
+            color: var(--ink);
+            font-family: "Manrope", sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 700px) {
+            .detail-page {
+                width: min(100% - 32px, 560px);
+                margin: 20px auto;
+            }
+
+            .detail-hero {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 22px;
+            }
+
+            .detail-hero img {
+                grid-row: 1;
+            }
+
+            .detail-section {
+                padding: 21px;
+            }
+
+            .implementation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .architecture-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .architecture-figure img {
+                height: min(55vh, 500px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="project-detail-page detail-page">
+        <a class="detail-back" href="../index.html#projects">← Back to projects</a>
+
+        <section class="detail-hero" aria-labelledby="project-title">
+            <div>
+                <p class="eyebrow">Cloud application · Multi-cloud</p>
+                <h1 id="project-title">Safe Button</h1>
+                <p class="detail-hero-copy">A daily check-in dashboard that helps people let a trusted contact know they are okay. A single check-in records the update and sends a timestamped email.</p>
+                <div class="detail-actions">
+                    <a class="detail-button" href="https://okcfisher.org/" target="_blank" rel="noopener noreferrer">Open live demo ↗</a>
+                    <a class="detail-button secondary" href="https://github.com/minhtri172/safe-button" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+                    <a class="detail-button secondary" href="../index.html#projects">Back to portfolio</a>
+                </div>
+            </div>
+            <img src="../images/safe-button-demo.gif" alt="Animated walkthrough of the Safe Button check-in dashboard">
+        </section>
+
+        <section class="detail-section">
+            <h2>Live demo</h2>
+            <p>This preview loads the currently deployed Daily Check-In Dashboard.</p>
+            <iframe class="live-demo-frame" src="https://okcfisher.org/" title="Live Safe Button Daily Check-In Dashboard" loading="lazy"></iframe>
+            <a class="live-demo-link" href="https://okcfisher.org/" target="_blank" rel="noopener noreferrer">Open the dashboard in a new tab ↗</a>
+        </section>
+
+        <section class="detail-section">
+            <h2>Project overview</h2>
+            <p>Safe Button is a Flask application built around a simple daily check-in workflow. The project explores how the same application idea can be deployed using two different cloud platforms, with each implementation using its own identity, storage, and delivery services.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Cloud implementations</h2>
+            <div class="implementation-grid">
+                <article class="implementation">
+                    <h3>Google Cloud</h3>
+                    <p>The main branch contains the Flask check-in app and a Cloud Build workflow. The check-in sends a timestamped email through configurable SMTP settings.</p>
+                    <a href="https://github.com/minhtri172/safe-button/tree/main" target="_blank" rel="noopener noreferrer">Explore Google Cloud branch ↗</a>
+                </article>
+                <article class="implementation">
+                    <h3>AWS</h3>
+                    <p>The AWS branch adds Cognito sign-in and per-user DynamoDB records, with an EKS deployment pipeline built from CodePipeline and CodeBuild.</p>
+                    <a href="https://github.com/minhtri172/safe-button/tree/aws-project2" target="_blank" rel="noopener noreferrer">Explore AWS branch ↗</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <h2>Architecture diagrams</h2>
+            <div class="architecture-grid">
+                <figure class="architecture-figure">
+                    <img src="../images/safe-button-screenshot-1.jpg" alt="Google Cloud architecture for Safe Button, including Cloud Run, Firestore, Cloud Build, Cloud Scheduler, and monitoring services" loading="lazy">
+                    <figcaption>Google Cloud architecture</figcaption>
+                </figure>
+                <figure class="architecture-figure">
+                    <img src="../images/safe-button-screenshot-2.png" alt="AWS architecture for Safe Button, including EKS, Cognito, DynamoDB, Lambda, EventBridge, and CodePipeline" loading="lazy">
+                    <figcaption>AWS architecture</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <h2>Key features</h2>
+            <ul>
+                <li>Simple daily check-in interface with a timestamped confirmation.</li>
+                <li>Email notifications configured through SMTP; the AWS implementation supports Amazon SES.</li>
+                <li>Google Cloud delivery workflow using Cloud Build.</li>
+                <li>AWS authentication with Cognito and user check-in data stored in DynamoDB.</li>
+                <li>Containerized AWS deployment to EKS through a staged CI/CD pipeline.</li>
+            </ul>
+        </section>
+
+        <section class="detail-section">
+            <h2>Technology stack</h2>
+            <div class="skill-list">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>Google Cloud Build</span>
+                <span>AWS Cognito</span>
+                <span>DynamoDB</span>
+                <span>Amazon SES</span>
+                <span>Docker</span>
+                <span>Kubernetes / EKS</span>
+                <span>CodePipeline</span>
+                <span>CodeBuild</span>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
